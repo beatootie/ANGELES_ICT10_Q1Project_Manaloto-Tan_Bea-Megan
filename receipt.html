@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Generator</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2025.2.4/core.css">
+
+    <script type="module"
+            src="https://pyscript.net/releases/2025.2.4/core.js">
+    </script>
+</head>
+<body>
+
+<div class="navbar">
+    <a class="brand" href="index.html">Megan and Bea's Mini Store</a>
+    <div class="nav-links">
+        <a href="sku.html">SKU Generator</a>
+        <a class="active" href="receipt.html">Receipt Generator</a>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <div class="header-icon"></div>
+        <h1>Receipt Generator</h1>
+        <p class="subtitle">Megan and Bea's Mini Store</p>
+    </div>
+
+    <div id="output" class="card-body">
+
+        <label for="customer_name">Customer Name</label>
+        <input type="text" id="customer_name" placeholder="e.g. Lacey Aguilar">
+
+        <h2 style="margin-top: 25px;">Menu</h2>
+
+        <div class="menu-item">
+            <label style="margin: 0;"><input type="checkbox" id="item1"> Espresso</label>
+            <span class="price">89</span>
+        </div>
+        <div class="menu-item">
+            <label style="margin: 0;"><input type="checkbox" id="item2"> Latte</label>
+            <span class="price">119</span>
+        </div>
+        <div class="menu-item">
+            <label style="margin: 0;"><input type="checkbox" id="item3"> Iced Tea</label>
+            <span class="price">79</span>
+        </div>
+        <div class="menu-item">
+            <label style="margin: 0;"><input type="checkbox" id="item4"> Brownie</label>
+            <span class="price">99</span>
+        </div>
+
+        <button py-click="create_order"> CREATE ORDER</button>
+
+        <hr>
+
+        <div id="result">
+            Your order summary will appear here.
+        </div>
+
+        <script type="py" src="./receipt.py"></script>
+
+    </div>
+</div>
+
+
+
+</body>
+</html>
